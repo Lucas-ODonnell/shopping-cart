@@ -2,8 +2,8 @@ import './App.css';
 import { BrowserRouter as Routes, Switch, Route } from 'react-router-dom';
 import Nav from './components/Nav.jsx';
 import Home from './components/Home.jsx';
-import About from './components/About.jsx';
-import Store from './components/Store.jsx';
+import About from './components/about/About.jsx';
+import Store from './components/store/Store.jsx';
 import ShoppingCart from './components/ShoppingCart.jsx';
 
 const Router = () => {

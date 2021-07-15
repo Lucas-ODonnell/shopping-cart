@@ -1,7 +1,7 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+v2.0 | 20110126
+License: none (public domain)
+ */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -51,51 +51,193 @@ table {
 	box-sizing: border-box;
 }
 
+
 /* Nav.jsx */
+.stax-banner, .stax-animation {
+	margin-top: 32px;
+	margin-bottom: 64px;
+	display: flex;
+	justify-content: center;
+}
 
 .navbar {
-	display: inline-flex;
-	width: 100%;
+	display: flex;
+	justify-content: space-between;
 	height: 64px;
 	background-color: rgb(127,127,127);
 	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-.nav-center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	width: 100%
+.nav-left {
+	padding-left: 32px;
+	width: 20%;
 }
 
-.nav-center ul {
+.nav-left ul {
 	display: flex;
 	justify-content: space-between;
-	width: 40%;
+	align-items: center;
+	height: 100%;
 }
 
-.nav-center li {
-	font-size: 2rem;
+.nav-left li {
+	font-size: 1.5rem;
 	font-weight: bold;
 }
 
-.nav-center a {
+.nav-left a {
 	color: black;
 	text-decoration: none;
 }
 
-.nav-right {
+.nav-center {
 	display: flex;
-	justify-content: flex-end;
 	align-items: center;
 	height: 100%;
-	padding-right: 16px;
+
+
+}
+
+.nav-center h1 {
+	font-size: 2rem;
+	font-weight: bold;
+	border: 1px solid black;
+	border-radius: 25px;
+	padding: 8px 16px;
+	color: rgb(112,10,48);
+	background-color: rgba(127,127,127,.5);
+}
+
+.nav-right {
+	display: flex;
+	align-items: center;
+	padding-right: 32px;
 }
 
 .nav-right a {
-	color: rgb(5,71,42);
+	color: rgb(5,71,42)
 }
 
+/* About */
+.history, .technology {
+	display: flex;
+	justify-content: center;
+}
+.company-history, .electrostatic-info {
+	margin-top: 32px;
+	box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+	padding: 30px 40px;
+	background-color: rgb(242,238,203);
+	border-radius: 15px;
+}
+
+.electrostatic-info {
+	margin-bottom: 32px;
+}
+
+.company-history h2 , .electrostatic-info h2 {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.company-history p, .electrostatic-info p {
+	text-indent: 16px;
+	margin-top: 16px;
+	line-height: 2;
+}
+
+/* Store */
+
+.products-grid {
+	display: grid;
+	justify-content: space-around;
+	grid-template-columns: repeat(3, 300px);
+	row-gap: 3em;
+	margin-top: 16px;
+	margin-bottom: 150px;
+}
+
+.product {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 400px;
+	max-width: 100%;
+}
+
+.product img {
+	height: 200px;
+	width: auto;
+	cursor: pointer;
+}
+
+.product h3 {
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-top: 8px;
+}
+
+.product p {
+	text-indent: 16px;
+	margin-top: 8px;
+	line-height: 1.5;
+	margin-bottom: 16px;
+	font-style: italic;
+}
+
+.price-row {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%
+}
+
+.price-row button {
+	font-weight: bold;
+	padding: 5px 10px;
+}
+
+.image-modal {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	background-color: white;
+	padding: 30px 40px;
+	border-radius: 15px;
+}
+
+.modal-content img {
+	height: 600px;
+	max-height: 100%;
+	width: auto;
+}
+
+.close-button {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.close-button button {
+	background: none;
+	border: none;
+	font-weight: bold;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
 
 

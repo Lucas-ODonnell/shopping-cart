@@ -9,7 +9,7 @@ const Nav = () => {
 	return (
 		<nav>
 			<div className="navbar">
-				<div className='nav-center'>
+				<div className='nav-left'>
 					<ul>
 						<li>
 							<Link to="/">Home</Link>
@@ -21,6 +21,9 @@ const Nav = () => {
 							<Link to="/store">Store</Link>
 						</li>
 					</ul>
+				</div>
+				<div className="nav-center">
+					<h1>STAX World</h1>
 				</div>
 				<div className='nav-right'>
 					<Link to="/checkout"><FontAwesomeIcon icon='shopping-cart' size='lg' /></Link>(0)
