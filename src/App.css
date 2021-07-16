@@ -91,6 +91,13 @@ nav {
 .nav-left a {
 	color: black;
 	text-decoration: none;
+	padding: 5px 10px;
+	border: 2px solid transparent;
+}
+
+.nav-left a:hover {
+	border: 2px solid white;
+	padding: 5px 10px;
 }
 
 .nav-center {
@@ -121,6 +128,48 @@ nav {
 	color: rgb(5,71,42)
 }
 
+.nav-right a:hover {
+	color: #470e05;
+}
+
+/* Footer */
+
+.footer {
+  padding: 1rem 0.5rem 0.5rem;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+	background-color: rgb(127,127,127);
+}
+
+
+/* Home */
+.home-banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 64px;
+	background-color: rgb(205,205,205);
+	margin-top: 16px;
+	margin-bottom: 64px;
+}
+
+.home-banner h2 {
+	font-size: 2rem;
+}
+.user-reviews {
+	display: flex;
+	justify-content: space-around;
+}
+
+.user-reviews img {
+	border-radius: 15px;
+}
+
 /* About */
 
 .stax-banner, .stax-animation {
@@ -130,11 +179,11 @@ nav {
 	justify-content: center;
 }
 
-.history, .technology {
+.history, .technology, .timeline {
 	display: flex;
 	justify-content: center;
 }
-.company-history, .electrostatic-info {
+.company-history, .electrostatic-info, .company-timeline {
 	margin-top: 32px;
 	box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
 	display: flex;
@@ -147,15 +196,15 @@ nav {
 }
 
 .electrostatic-info {
-	margin-bottom: 32px;
+	margin-bottom: 64px;
 }
 
-.company-history h2 , .electrostatic-info h2 {
+.company-history h2 , .electrostatic-info h2, .company-timeline h2 {
 	font-size: 3rem;
 	font-weight: bold;
 }
 
-.company-history p, .electrostatic-info p {
+.company-history p, .electrostatic-info p, .company-timeline p {
 	text-indent: 16px;
 	margin-top: 16px;
 	line-height: 2;
@@ -210,6 +259,14 @@ nav {
 .price-row button {
 	font-weight: bold;
 	padding: 5px 10px;
+	cursor: pointer;
+	border: 1px solid rgb(127,127,127);
+	border-radius: 4px;
+}
+
+.price-row button:hover {
+	border: 1px solid red;
+	border-radius: 4px;
 }
 
 .image-modal {

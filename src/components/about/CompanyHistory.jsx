@@ -4,19 +4,34 @@ const CompanyHistory = () => {
 	return (
 		<section className="history">
 			<div className="company-history">
-				<h2>Company History</h2>
-				<p>STAX was founded in 1938. In 1959, STAX developed the electrostatic headphone and started
-					started selling the SR-1 in 1960 along with amplifiers to run their headphones.</p>
-				<p>In 1979 they started selling their SR-Lambda headphone. The design 
-					has been improved over the years and today, you can still buy headphones based off 
-					of the iconic design. The new Lambdas are the L300, L500, and L700. </p>
-				<p>In 1993 Stax started selling the SR-Omega. At the time considered by many to be the 
-					best headphone ever made. Today the direct descendents of the SR-Omega are the SR007, 
-					SR-009, and SR-009s. Today, many audiophiles consider the STAX SR-009s to be the best
-					headphone in production. Others say it is the best headphone under $55,000.</p>
+				<h2>STAX Earspeakers</h2>
+				<div className="introduction">
+					<p>Come explore the world of electrostatic headphones. Stax electrostatic headphones strive
+					to fix one major problem in audio. The problem of prohibitively high costs versus
+					compromise.</p>
+					<p>Good speakers sound better than good headphones. Good speakers also require you
+					to position them perfectly for the geometry of the room which you should probably build
+					so that the sound will reflect off the walls at the right angles to reproduce the sound
+					of live music. If you took the best speakers in the world and put them in the wrong
+					room they wouldn't sound very good</p>
+					<p>The problem with conventional electrodynamic headphone and to an extent the planar
+					magnetic headphone is compromise. The music sounds good, because music you like in any
+						situatin is good, but it doesn't have the depth
+					of sound speakers have. The details of the music can blend together into mush. If trumpets,
+					trombones, and tuba are all playing together it will sound like a mushed together chord, instead
+					of three different instruments playing together. It also sounds like music is being generated
+					right next to your ears, which sounds unnatural.</p>
+					<p>Stax created the Earspeaker to try and fix this compromise. They were and are a small Japanese
+					company, that do not care about style or convience. All they care about is sound. They
+					don't really advertise, not even in Japan. They went bankrupt twice, because they
+					spent all their money developing headphones instead of selling them.</p>
+					<p>Luckily, Wendong Zhang the CEO of Edifier, a huge Chinese audio company is a big
+					fan of Stax. Edifier bought them out, built them a modern clean room environment in Japan,
+					and told them to keep doing what they are doing.</p>
+				</div>
 			</div>
 		</section>
-	)
-}
+			)
+		}
 
 export default CompanyHistory;

@@ -3,10 +3,11 @@ import './App.css';
 import { BrowserRouter as Routes, Switch, Route } from 'react-router-dom';
 import Banner from './Banner.jsx';
 import Nav from './components/Nav.jsx';
-import Home from './components/Home.jsx';
+import Home from './components/home/Home.jsx';
 import About from './components/about/About.jsx';
 import Store from './components/store/Store.jsx';
 import ShoppingCart from './components/ShoppingCart.jsx';
+import Footer from './components/Footer.jsx';
 
 const Router = () => {
 	const localStorageCart = localStorage.getItem('shoppingCart') || '[{}]'; 
@@ -47,6 +48,7 @@ const Router = () => {
 					<ShoppingCart  {...{shoppingCart}}/>
 				</Route>
 			</Switch>
+			<Footer />
 		</Routes>
 	)
 }
