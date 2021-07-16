@@ -5,10 +5,10 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 library.add(fas)
 
-const Nav = () => {
+const Nav = ({shoppingCart}) => {
 	return (
 		<nav>
-			<div className="navbar">
+			<div className=" navbar">
 				<div className='nav-left'>
 					<ul>
 						<li>
@@ -26,7 +26,7 @@ const Nav = () => {
 					<h1>STAX World</h1>
 				</div>
 				<div className='nav-right'>
-					<Link to="/checkout"><FontAwesomeIcon icon='shopping-cart' size='lg' /></Link>(0)
+					<Link to="/checkout"><FontAwesomeIcon icon='shopping-cart' size='lg' /></Link>({shoppingCart.length})
 				</div>
 			</div>
 		</nav>

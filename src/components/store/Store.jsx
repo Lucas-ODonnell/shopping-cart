@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import { products } from './products.js';
 import ImageModal from './ImageModal.jsx';
+import {products} from './products.js';
 
-const Store = () => {
+const Store = ({addProductToCart}) => {
 	const [showModal, setShowModal] = useState(false);
 	const [modalImage, setModalImage] = useState('');
 	return (
@@ -19,7 +19,7 @@ const Store = () => {
 								{product.price}
 							</div>
 							<div>
-								<button>Add To Cart</button>
+								<button onClick={() => addProductToCart(product)}>Add To Cart</button>
 							</div>
 						</div>
 					</div>

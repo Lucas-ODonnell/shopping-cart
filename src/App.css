@@ -51,15 +51,18 @@ table {
 	box-sizing: border-box;
 }
 
-
-/* Nav.jsx */
-.stax-banner, .stax-animation {
-	margin-top: 32px;
-	margin-bottom: 64px;
-	display: flex;
-	justify-content: center;
+body {
+	padding-top: 64px;
 }
 
+/* Nav.jsx */
+
+nav {
+	 position: fixed;
+    width: 100%;
+    top: 0;
+		z-index: 2;
+}
 .navbar {
 	display: flex;
 	justify-content: space-between;
@@ -119,6 +122,14 @@ table {
 }
 
 /* About */
+
+.stax-banner, .stax-animation {
+	margin-top: 32px;
+	margin-bottom: 64px;
+	display: flex;
+	justify-content: center;
+}
+
 .history, .technology {
 	display: flex;
 	justify-content: center;
@@ -240,4 +251,17 @@ table {
 	cursor: pointer;
 }
 
-
+/* Banner */
+.banner {
+	position:fixed;
+	top: 64px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: red;
+	height: 30px;
+	font-weight: bold;
+}

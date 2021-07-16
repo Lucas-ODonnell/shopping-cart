@@ -110,14 +110,14 @@ export const products = [
 	{
 		id: uniqid(),
 		name: "STAX SRM-700S",
-		price: "$3,400",
+		price: "$3,400.00",
 		description: "The SRM-700S is an electrostatic headphone driver utilizing a fully discrete dual FET. The output of the J-FET and the large current emitter follower circuit are low noise. Accurate music reproduction is realized without missing any fine details.",
 		image: SRM700S
 	},
 	{
 		id: uniqid(),
 		name: "STAX SRM-700T Electrostatic Energizer",
-		price: "$3,400",
+		price: "$3,400.00",
 		description: "The newly designed SRM-700T is a hybrid electrostatic headphone driver. Inspired by the flagship model SRM-T8000, the 700T uses solid-state FET as a driver stage and vacuum tube as the output stage.",
 		image: SRM700T
 	}
