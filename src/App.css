@@ -125,7 +125,7 @@ nav {
 }
 
 .nav-right a {
-	color: rgb(5,71,42)
+	color: rgb(5,71,42);
 }
 
 .nav-right a:hover {
@@ -321,4 +321,110 @@ nav {
 	background-color: red;
 	height: 30px;
 	font-weight: bold;
+}
+
+/* Shopping Cart */
+.item-list {
+	margin-top: 25px;
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 25px;
+}
+
+.title h2 {
+	font-size: 3rem;
+	font-weight:bold
+}
+
+.item {
+	display: flex;
+	justify-content: space-between;
+	background-color: rgb(242,238,203);
+	box-shadow: 0 2px 5px rgb(0,0,0,0.3);
+	margin-bottom: 32px;
+	margin-top: 16px
+}
+
+.item-left {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px 20px;
+}
+
+.item-left div {
+	font-size: 1.2rem;
+	font-weight: bold;
+	word-wrap: break-word;
+	width: 200px;
+	display: flex;
+	justify-content: center;
+}
+
+.item-left img {
+	height: 100px;
+	width: 100px;
+	margin-top: 16px;
+	border-radius: 50%
+}
+
+.item-right {
+	padding: 20px 30px;
+	bottom: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.item-right button {
+	background: none;
+	border: none;
+}
+
+.item-right button:hover {
+	color: #470e05;
+}
+
+.total-price {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 30px;
+	margin-bottom: 16px;
+}
+
+.total-price h4 {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.total-price div {
+	font-size: 1.3rem;
+}
+
+.submit {
+	margin-bottom: 100px;
+}
+
+.submit-button {
+	display: flex;
+	justify-content: center;
+}
+
+.submit-button button {
+	width: 90%;
+	font-size: 2rem;
+	padding: 10px 20px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.8);
+	border: 2px solid transparent;
+	background-color: rgb(205,205,205);
+	border-radius: 4px;
+}
+
+.submit-button button:hover {
+	border: 2px solid rgb(5,71,42);
+	border-radius: 4px;
 }

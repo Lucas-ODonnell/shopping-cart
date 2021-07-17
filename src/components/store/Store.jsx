@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import ImageModal from './ImageModal.jsx';
 import {products} from './products.js';
 
-const Store = ({addProductToCart}) => {
+const Store = ({addProductToCart, formatter}) => {
 	const [showModal, setShowModal] = useState(false);
 	const [modalImage, setModalImage] = useState('');
 	return (
@@ -16,7 +16,7 @@ const Store = ({addProductToCart}) => {
 						<p>{product.description}</p>
 						<div className="price-row">
 							<div>
-								{product.price}
+								{formatter.format(product.price)}
 							</div>
 							<div>
 								<button onClick={() => addProductToCart(product)}>Add To Cart</button>
