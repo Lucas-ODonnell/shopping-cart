@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import useLocalStorage from './hooks/useLocalStorage';
 import './App.css';
 import { BrowserRouter as Routes, Switch, Route } from 'react-router-dom';
 import Banner from './Banner.jsx';
@@ -11,26 +12,10 @@ import Footer from './components/Footer.jsx';
 import uniqid from 'uniqid';
 
 const Router = () => {
-	const localStorageCart = localStorage.getItem('shoppingCart') || '[]'; 
-	const generatedCart = JSON.parse(localStorageCart);
-	const [shoppingCart, setShoppingCart] = useState(generatedCart);
-	const [showBanner, setShowBanner] = useState(false);
+	const [shoppingCart, setShoppingCart] = useLocalStorage('shoppingCart', []);
+	const [sumOfCart, setSumOfCart] = useLocalStorage('sumOfCartString', "0");
 	const [currentProduct, setCurrentProduct] = useState({});
-	const localStorageSum = localStorage.getItem('sumOfCartString');
-	const generatedSum = JSON.parse(localStorageSum);
-	const [sumOfCart, setSumOfCart] = useState(generatedSum);
-	const cartString = JSON.stringify(shoppingCart);
-	const sumOfCartString = JSON.stringify(sumOfCart);
-
-	const deleteFromCart = (id) => {
-		setShoppingCart(shoppingCart.filter(item => item.id !== id));
-		deleteCart(id);
-	}
-
-	const deleteCart = (id) => {
-		const toDelete = shoppingCart.filter(item => item.id === id);
-		setSumOfCart(sumOfCart - toDelete[0].price)
-	}
+	const [showBanner, setShowBanner] = useState(false);
 
 	const addProductToCart = (product) => {
 		//deep copy prevents change to the original product object
@@ -39,18 +24,23 @@ const Router = () => {
 		setCurrentProduct(thisProduct);
 		setShoppingCart([...shoppingCart, thisProduct])
 		flashBanner();
-		addCart(thisProduct);
+		addPriceOfSelectedItemToCart(thisProduct);
+		product.quantity = 1;
 	}
 
-	const addCart = (thisProduct) => {
-		setSumOfCart(sumOfCart + thisProduct.price)
+	const addPriceOfSelectedItemToCart = (thisProduct) => {
+		setSumOfCart(sumOfCart + (thisProduct.price * thisProduct.quantity))
 	}
 
-	useEffect(() => {
-		const filteredCart = shoppingCart.filter(value => Object.keys(value).length !== 0);
-		localStorage.setItem('shoppingCart', JSON.stringify(filteredCart));
-		localStorage.setItem('sumOfCartString', JSON.stringify(sumOfCart))
-	}, [cartString, shoppingCart, sumOfCartString, sumOfCart]);
+	const deleteFromCart = (id) => {
+		setShoppingCart(shoppingCart.filter(item => item.id !== id));
+		removePriceFromDeletedItem(id);
+	}
+
+	const removePriceFromDeletedItem = (id) => {
+		const toDelete = shoppingCart.filter(item => item.id === id);
+		setSumOfCart(sumOfCart - (toDelete[0].price * toDelete[0].quantity))
+	}
 
 	const flashBanner = () => {
 		setShowBanner(true);

@@ -256,7 +256,15 @@ nav {
 	width: 100%
 }
 
-.price-row button {
+.item-quantity input {
+	width: 40px;
+}
+
+.addcart-button {
+	margin-top: 16px;
+}
+
+.addcart-button button {
 	font-weight: bold;
 	padding: 5px 10px;
 	cursor: pointer;
@@ -264,7 +272,7 @@ nav {
 	border-radius: 4px;
 }
 
-.price-row button:hover {
+.addcart-button button:hover {
 	border: 1px solid red;
 	border-radius: 4px;
 }

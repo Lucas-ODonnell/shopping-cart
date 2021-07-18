@@ -13,11 +13,11 @@ const ShoppingCart = ({shoppingCart, formatter, sumOfCart, deleteFromCart}) => {
 			{shoppingCart.map(item => (
 				<div key={item.id} className="item">
 					<div className="item-left">
-						<div className="item-name">{item.name}</div>
+						<div className="item-name">{item.name}&times;({item.quantity})</div>
 						<img src={item.image} alt={item.name} />
 					</div>
 					<div className="item-right">
-						{formatter.format(item.price)}
+						{formatter.format(item.price * item.quantity)}
 						<div>
 							<button onClick={() => deleteFromCart(item.id)}><FontAwesomeIcon icon='trash' size='lg' /></button>
 						</div>
