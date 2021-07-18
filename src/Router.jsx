@@ -8,6 +8,7 @@ import Home from './components/home/Home.jsx';
 import About from './components/about/About.jsx';
 import Store from './components/store/Store.jsx';
 import ShoppingCart from './components/shopping-cart/ShoppingCart.jsx';
+import CheckOut from './components/shopping-cart/CheckOut.jsx';
 import Footer from './components/Footer.jsx';
 import uniqid from 'uniqid';
 
@@ -67,6 +68,7 @@ const Router = () => {
 				<Route exact path='/checkout' >
 					<ShoppingCart  {...{shoppingCart, formatter, sumOfCart, deleteFromCart}}/>
 				</Route>
+				<Route path="/checkout/thank-you-page" component={CheckOut} />
 			</Switch>
 			<Footer />
 		</Routes>

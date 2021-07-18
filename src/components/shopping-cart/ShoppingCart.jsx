@@ -1,10 +1,16 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 library.add(fas)
 
 const ShoppingCart = ({shoppingCart, formatter, sumOfCart, deleteFromCart}) => {
+	const history = useHistory();
+	const routeChange = () => {
+		let path = 'checkout/thank-you-page';
+		history.push(path);
+	}
 	return (
 		<section className="item-list">
 			<div className="title">
@@ -30,7 +36,7 @@ const ShoppingCart = ({shoppingCart, formatter, sumOfCart, deleteFromCart}) => {
 					<div>{formatter.format(sumOfCart)}</div>
 				</div>
 				<div className="submit-button">
-					<button>Buy</button>
+					<button onClick={routeChange}>Check Out</button>
 				</div>
 			</div>
 		</section>

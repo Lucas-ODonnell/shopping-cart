@@ -25,9 +25,9 @@ const CompanyHistory = () => {
 					company, that do not care about style or convience. All they care about is sound. They
 					don't really advertise, not even in Japan. They went bankrupt twice, because they
 					spent all their money developing headphones instead of selling them.</p>
-					<p>Luckily, Wendong Zhang the CEO of Edifier, a huge Chinese audio company is a big
-					fan of Stax. Edifier bought them out, built them a modern clean room environment in Japan,
-					and told them to keep doing what they are doing.</p>
+					<p>Edifier bought Stax, built them a modern clean room environment in Japan,
+					and according to Edifier CEO Wendong Zhang, STAX will be introducing a new headphone
+					when STAX feels they have made something significant enough to bring to market.</p>
 				</div>
 			</div>
 		</section>

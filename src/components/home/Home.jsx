@@ -1,16 +1,17 @@
 import React from 'react'
-import quoteOne from './5gn0xl.jpg';
-import quoteTwo from './5gn1ic.jpg';
+import bannerImage from '../images/SRM400_image1450820.jpg';
 
 const Home = () => {
 	return (
 		<section>
-			<div className="home-banner">
-				<h2>What Are People Saying About STAX Headphones?</h2>
+			<div className="home-image">
+			<img src={bannerImage} alt="l700 with srm400s" />
 			</div>
-			<div className="user-reviews">
-				<img src={quoteOne} alt='mahler stax' />
-				<img src={quoteTwo}  alt='dennis ritchie stax'/>
+			<div className="home-banner">
+				<h2>New Products</h2>
+			</div>
+			<div className="new-items">
+				<p>There are currently no new products scheduled to be released</p>
 			</div>
 		</section>
 	)
