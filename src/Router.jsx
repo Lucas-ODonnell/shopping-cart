@@ -60,7 +60,7 @@ const Router = () => {
 			<Nav {...{shoppingCart}}/>
 			<Banner {...{showBanner, currentProduct}}/>
 			<Switch>
-				<Route exact path='/' component={Home} />
+				<Route exact path='/shopping-cart' component={Home} />
 				<Route exact path='/about' component={About} />
 				<Route exact path='/store'>
 					<Store {...{addProductToCart, formatter}}/>
