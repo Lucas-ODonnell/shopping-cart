@@ -5,20 +5,18 @@ import Technology from './Technology.jsx';
 import staxBanner from '../images/stax-banner.jpg';
 import staxGif from '../images/stax-working.gif';
 
-const About = () => {
-	return (
-		<div>
-			<div className="stax-banner">
-				<img src={staxBanner} alt="stax company logo banner" />
-			</div>
-			<CompanyHistory />
-			<TimeLine />
-			<div className="stax-animation" >
+const About = () => (
+	<div>
+		<div className="stax-banner">
+			<img src={staxBanner} alt="stax company logo banner" />
+		</div>
+		<CompanyHistory />
+		<TimeLine />
+		<div className="stax-animation" >
 			<img src={staxGif} alt="electrostatic technology gif" />
 		</div>
 		<Technology />
-		</div>
-	)
-}
+	</div>
+)
 
 export default About;
