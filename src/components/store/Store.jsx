@@ -15,7 +15,7 @@ const Store = ({addProductToCart, formatter}) => {
 			<div className="products-grid">
 				{products.map((product) => (
 					<div key={product.id} >
-						<ProductListing {...{product, addProductToCart, formatter, setModalImage, setItemQuantity}} />
+						<ProductListing {...{product, addProductToCart, formatter, setModalImage, setItemQuantity, setShowModal}} />
 					</div>
 				))}
 				<ImageModal onClose={() => setShowModal(false)} showModal={showModal} productImage={modalImage} />
