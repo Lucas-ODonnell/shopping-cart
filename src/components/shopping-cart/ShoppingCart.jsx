@@ -12,33 +12,37 @@ const ShoppingCart = ({shoppingCart, formatter, sumOfCart, deleteFromCart}) => {
 		history.push(path);
 	}
 	return (
-		<section className="item-list">
-			<div className="title">
-				<h2>Your Shopping Cart</h2>
-			</div>
-			{shoppingCart.map(item => (
-				<div key={item.id} className="item">
-					<div className="item-left">
-						<div className="item-name">{item.name}&times;({item.quantity})</div>
-						<img src={item.image} alt={item.name} />
-					</div>
-					<div className="item-right">
-						{formatter.format(item.price * item.quantity)}
-						<div>
-							<button onClick={() => deleteFromCart(item.id)}><FontAwesomeIcon icon='trash' size='lg' /></button>
+		<section> 
+			<div className="shopping-cart">
+					<div className="item-list">
+						<div className="title">
+							<h2>Your Shopping Cart</h2>
+						</div>
+						{shoppingCart.map(item => (
+							<div key={item.id} className="item">
+								<div className="item-left">
+									<div className="item-name">{item.name}&times;({item.quantity})</div>
+									<img src={item.image} alt={item.name} />
+								</div>
+								<div className="item-right">
+									{formatter.format(item.price * item.quantity)}
+									<div>
+										<button onClick={() => deleteFromCart(item.id)}><FontAwesomeIcon icon='trash' size='lg' /></button>
+									</div>
+								</div>
+							</div>
+						))}
+						<div className="submit">
+							<div className="total-price">
+								<h4>Total:</h4>
+								<div>{formatter.format(sumOfCart)}</div>
+							</div>
+							<div className="submit-button">
+								<button onClick={routeChange}>Check Out</button>
+							</div>
 						</div>
 					</div>
 				</div>
-			))}
-			<div className="submit">
-				<div className="total-price">
-					<h4>Total:</h4>
-					<div>{formatter.format(sumOfCart)}</div>
-				</div>
-				<div className="submit-button">
-					<button onClick={routeChange}>Check Out</button>
-				</div>
-			</div>
 		</section>
 	)
 }

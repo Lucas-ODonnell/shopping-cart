@@ -6,17 +6,21 @@ import staxBanner from '../images/stax-banner.jpg';
 import staxGif from '../images/stax-working.gif';
 
 const About = () => (
-	<div>
-		<div className="stax-banner">
-			<img src={staxBanner} alt="stax company logo banner" />
+	<section>
+		<div className="about">
+			<div className="about-container">
+				<div className="stax-banner">
+					<img src={staxBanner} alt="stax company logo banner" />
+				</div>
+				<CompanyHistory />
+				<TimeLine />
+				<div className="stax-animation" >
+					<img src={staxGif} alt="electrostatic technology gif" />
+				</div>
+				<Technology />
+			</div>
 		</div>
-		<CompanyHistory />
-		<TimeLine />
-		<div className="stax-animation" >
-			<img src={staxGif} alt="electrostatic technology gif" />
-		</div>
-		<Technology />
-	</div>
+	</section>
 )
 
 export default About;

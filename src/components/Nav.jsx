@@ -7,25 +7,27 @@ library.add(fas)
 
 const Nav = ({shoppingCart}) => (
 	<nav>
-		<div className=" navbar">
-			<div className='nav-left'>
-				<ul>
-					<li>
-						<Link to="/shopping-cart">Home</Link>
-					</li>
-					<li>
-						<Link to="/about">About</Link>
-					</li>
-					<li>
-						<Link to="/store">Store</Link>
-					</li>
-				</ul>
-			</div>
-			<div className="nav-center">
-				<h1>STAX World</h1>
-			</div>
-			<div className='nav-right'>
-				<Link to="/checkout"><FontAwesomeIcon icon='shopping-cart' size='lg' /></Link>({shoppingCart.length})
+		<div className="navbar">
+			<div className="nav-container nav-content">
+				<div className='nav-left'>
+					<ul>
+						<li>
+							<Link to="/shopping-cart">Home</Link>
+						</li>
+						<li>
+							<Link to="/about">About</Link>
+						</li>
+						<li>
+							<Link to="/store">Store</Link>
+						</li>
+					</ul>
+				</div>
+				<div className="nav-center">
+					<h1>STAX World</h1>
+				</div>
+				<div className='nav-right'>
+					<Link to="/checkout"><FontAwesomeIcon icon='shopping-cart' size='lg' /></Link>({shoppingCart.length})
+				</div>
 			</div>
 		</div>
 	</nav>

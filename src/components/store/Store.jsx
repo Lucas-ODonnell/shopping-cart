@@ -12,13 +12,17 @@ const Store = ({addProductToCart, formatter}) => {
 	}
 	return (
 		<section>
-			<div className="products-grid">
-				{products.map((product) => (
-					<div key={product.id} >
-						<ProductListing {...{product, addProductToCart, formatter, setModalImage, setItemQuantity, setShowModal}} />
+			<div className="store">
+				<div className="store-container">
+					<div className="products-grid">
+						{products.map((product) => (
+							<div key={product.id} >
+								<ProductListing {...{product, addProductToCart, formatter, setModalImage, setItemQuantity, setShowModal}} />
+							</div>
+						))}
+						<ImageModal onClose={() => setShowModal(false)} showModal={showModal} productImage={modalImage} />
 					</div>
-				))}
-				<ImageModal onClose={() => setShowModal(false)} showModal={showModal} productImage={modalImage} />
+				</div>
 			</div>
 		</section>
 	)
